@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Outfit:wght@400;700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat:wght@500;700&family=Outfit:wght@400;700&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  font-family: "Fraunces", serif;
+  margin: 0;
+}
+:root {
+  --Verydarkblue: hsl(212, 21%, 14%);
+  --Darkgrayishblue: hsl(228, 12%, 48%);
+  --White: hsl(0, 0%, 100%);
+  --Darkcyan: hsl(158, 49%, 34%);
+  --Cream: hsl(30, 38%, 92%);
+}
+
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--Cream);
+  min-height: 100vh;
+}
+
+.main{
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--White);
+  min-width: 20em;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-wrapper{
+  width: 20em;
+  background: url("images/image-product-desktop.jpg") center;
+  background-size: cover;
+  aspect-ratio: 1/1.28;
+  border-radius: 8px 0 0 8px;
+}
+
+
+.text-box{
+ 
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  }
+
+.text-box h1{
+  max-width: 10ch;
+  margin-bottom: 20px;
+  line-height: 30px;
+}
+
+.text-box p{
+  display: flex;
+  line-height: 20px;
+  max-width: 24ch;
+  font-family: "Montserrat", sans-serif;
+  color: var(--Darkgrayishblue);
+  font-size: small;
+}
+#price{
+  font-family: "Fraunces", serif;
+  color: var(--Darkcyan);
+  font-size: xx-large;
+  font-weight: 600;
+  margin-top: 20px;  
+}
+#noprice{
+  margin-left: 20px;
+  margin-top: 25px; 
+  font-size:small;
+  text-decoration: line-through;
+}
+.tax{
+  display: flex;
+ align-items: center;
+  
+}
+.perfume{
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 20px;
+}
+
+button img{
+  
+  width: 4%;
+  color:var(--White);
+  margin-right: 5px;
+}
+button{
+  margin-top: 2em;
+  color: var(--White);
+  background-color: var(--Darkcyan);
+  border: none;
+  width: 100%;
+  height: 40px;
+  font-family: "Montserrat", sans-serif;
+  border-radius: 5px;
+}
+
+@media (max-width:640px) {
+  .main{
+    width: min-content;
+  }
+  .image-wrapper{
+    background: url('./images/image-product-mobile.jpg') no-repeat 0% 0%;
+    background-size: cover;
+    aspect-ratio: 1.5/1;
+  border-radius: 8px 8px 0 0;
+  }
+  .text-box{
+    padding: 1.5em;
+    width: 100%;
+  }
+  .text-box p{
+    max-width: 30ch;
+  }
+}
